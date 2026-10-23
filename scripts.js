@@ -8,7 +8,8 @@ function getComputerChoice() {
     return "scissors";
   }
 }
-console.log(getComputerChoice());
+const computerChoice = getComputerChoice();
+console.log(computerChoice);
 
 let humanChoice = prompt(
   "Please enter a choice of 'Rock', 'Paper', or 'Scissors'",
@@ -18,9 +19,6 @@ function getHumanChoice() {
   return humChoice;
 }
 console.log(getHumanChoice());
-
-let humanScore;
-let computerScore;
 
 function playRound(humanChoice, computerChoice) {
   if (humanChoice == "rock" && computerChoice == "scissors") {
@@ -35,4 +33,5 @@ function playRound(humanChoice, computerChoice) {
     return "Computer WINS!!";
   }
 }
-console.log(playRound(getHumanChoice(), getComputerChoice()));
+
+console.log(playRound(getHumanChoice(), computerChoice));
